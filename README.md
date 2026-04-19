@@ -1,16 +1,25 @@
-## Hi there 👋
+# Nicholas Dunzelman
 
-<!--
-**dicnunz/dicnunz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I build local-first developer tools, LLM eval systems, browser testing harnesses, and technically weird interfaces.
 
-Here are some ideas to get you started:
+## Best public work
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- [mentor-worker-benchmark](https://github.com/dicnunz/mentor-worker-benchmark): benchmark for mentor-worker LLM collaboration on deterministic coding tasks. [Live leaderboard](https://dicnunz.github.io/mentor-worker-benchmark/)
+- [taskproof](https://github.com/dicnunz/taskproof): evidence-first Playwright harness for turning web task specs into inspectable proof bundles.
+- [boundary-atlas](https://github.com/dicnunz/boundary-atlas): architecture radar for TS/JS repos with drift checks and offline reports.
+- [counterexample-studio](https://github.com/dicnunz/counterexample-studio): property-based testing workbench for reproducible counterexamples and shrink traces.
+- [llm-eval-harness](https://github.com/dicnunz/llm-eval-harness): lightweight local-LLM eval runner over any OpenAI-compatible API.
+- [pixelmelt](https://github.com/dicnunz/pixelmelt): browser-based image-to-material simulation and clip exporter.
+
+## What I optimize for
+
+- local-first workflows
+- inspectable artifacts instead of vague scores
+- deterministic reruns
+- small tools that are fast to understand and actually usable
+
+## Other public repos
+
+- [promptops-studio](https://github.com/dicnunz/promptops-studio): compact FastAPI + React starter for practical text operations.
+- [med-explain](https://github.com/dicnunz/med-explain): local clinical PDF explanation with OCR fallback and FHIR export.
+- [trolley-tracker](https://github.com/dicnunz/trolley-tracker): transit UI prototype for live vehicle state and schedule fallback.
