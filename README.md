@@ -2,6 +2,8 @@
 
 I build local-first developer tools, LLM eval systems, browser testing harnesses, and technically weird interfaces.
 
+Start here: [dicnunz.github.io](https://dicnunz.github.io/)
+
 ## Best public work
 
 - [mentor-worker-benchmark](https://github.com/dicnunz/mentor-worker-benchmark): benchmark for mentor-worker LLM collaboration on deterministic coding tasks. [Live leaderboard](https://dicnunz.github.io/mentor-worker-benchmark/)
