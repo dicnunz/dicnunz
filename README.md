@@ -1,10 +1,14 @@
 # Nicholas Dunzelman
 
-Computer Science student at Florida Tech with an entrepreneurship minor. I build local-first AI tools, eval harnesses, browser automation workflows, and product prototypes that are easy to run, inspect, and judge.
+Computer Science student at Florida Tech with an entrepreneurship minor. I build local-first AI tools, eval harnesses, browser automation workflows, developer tools, and product prototypes that are easy to run, inspect, and judge.
 
-Start here: [dicnunz.github.io](https://dicnunz.github.io/)
+Start here: [dicnunz.github.io](https://dicnunz.github.io/) | [LinkedIn](https://www.linkedin.com/in/nicdunz/) | [live benchmark](https://dicnunz.github.io/mentor-worker-benchmark/)
 
-Most of this work is AI-assisted. The signal I want you to evaluate is the engineering judgment around idea selection, product shape, verification, packaging, and whether a rough concept becomes a credible demo.
+What to notice fast:
+
+- I ship runnable artifacts, not just concepts.
+- The strongest repos have setup paths, screenshots, tests, sample outputs, reports, or live pages.
+- I use AI heavily and label it clearly. The signal is engineering judgment: choosing bounded ideas, validating behavior, and packaging the result so another person can evaluate it quickly.
 
 ## Strongest Public Work
 
