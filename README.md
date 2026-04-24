@@ -2,6 +2,8 @@
 
 Computer Science student at Florida Tech with an entrepreneurship minor. I build local-first AI tools, eval harnesses, browser automation workflows, developer tools, and product prototypes that are easy to run, inspect, and judge.
 
+Currently seeking Summer/Fall 2026 internships in AI product, developer tools, AI workflow automation, product engineering, and developer relations.
+
 Start here: [dicnunz.github.io](https://dicnunz.github.io/) | [LinkedIn](https://www.linkedin.com/in/nicdunz/) | [live benchmark](https://dicnunz.github.io/mentor-worker-benchmark/)
 
 What to notice fast:
@@ -9,6 +11,12 @@ What to notice fast:
 - I ship runnable artifacts, not just concepts.
 - The strongest repos have setup paths, screenshots, tests, sample outputs, reports, or live pages.
 - I use AI heavily and label it clearly. The signal is engineering judgment: choosing bounded ideas, validating behavior, and packaging the result so another person can evaluate it quickly.
+
+Best internship starting points:
+
+- [LineLight](https://github.com/dicnunz/linelight): Next.js/Vercel QR waitlist app with guest, host, and public queue flows.
+- [llm-eval-harness](https://github.com/dicnunz/llm-eval-harness): Python CLI for repeatable local LLM output comparison.
+- [taskproof](https://github.com/dicnunz/taskproof): browser-flow evidence runner with screenshots, logs, and proof reports.
 
 ## Strongest Public Work
 
