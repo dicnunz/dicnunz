@@ -1,47 +1,44 @@
 # Nicholas Dunzelman
 
-Computer Science student at Florida Tech with an entrepreneurship minor. I build local-first AI tools, eval harnesses, browser automation workflows, developer tools, and product prototypes that are easy to run, inspect, and judge.
+Computer Science student at Florida Tech. I build local-first AI tools and product prototypes that are easy to run, inspect, and judge.
 
-Currently seeking Summer/Fall 2026 internships in AI product, developer tools, AI workflow automation, product engineering, and developer relations.
+## Start Here
 
-Start here: [dicnunz.github.io](https://dicnunz.github.io/) | [LinkedIn](https://www.linkedin.com/in/nicdunz/) | [live benchmark](https://dicnunz.github.io/mentor-worker-benchmark/)
+[Codex Relay](https://github.com/dicnunz/codex-relay) is the flagship project.
 
-What to notice fast:
+Text your Mac. Codex works.
 
-- I ship runnable artifacts, not just concepts.
-- The strongest repos have setup paths, screenshots, tests, sample outputs, reports, or live pages.
-- I use AI heavily and label it clearly. The signal is engineering judgment: choosing bounded ideas, validating behavior, and packaging the result so another person can evaluate it quickly.
+A private Telegram DM becomes a local Codex run on a Mac through a LaunchAgent. The phone is the remote; the Mac keeps the files, tools, sandbox, and account context.
 
-Best internship starting points:
+- Install path: `git clone`, `cd codex-relay`, `./scripts/install.sh`
+- Proof path: no-token demo, fresh-clone test, macOS CI, generated visuals, launch thread
+- Boundary: unofficial project, allow-listed Telegram access, local runtime, no hosted relay
 
-- [codex-relay](https://github.com/dicnunz/codex-relay): private Telegram remote that hands work to local Codex on a Mac through a LaunchAgent.
-- [taskproof](https://github.com/dicnunz/taskproof): browser-flow evidence runner with screenshots, logs, and proof reports.
-- [boundary-atlas](https://github.com/dicnunz/boundary-atlas): TS/JS architecture analyzer for import graphs, cycles, deep imports, and drift.
+- Portfolio: [dicnunz.github.io](https://dicnunz.github.io/)
+- Launch: [X post](https://x.com/nicdunz/status/2048166756762427808)
+- LinkedIn: [nicdunz](https://www.linkedin.com/in/nicdunz/)
 
-## Strongest Public Work
+## Supporting Work
 
-- [codex-relay](https://github.com/dicnunz/codex-relay): local Telegram-to-Codex bridge for sending tasks, images, screenshots, and repo work to a Mac from an allow-listed phone DM.
-- [taskproof](https://github.com/dicnunz/taskproof): Playwright-based browser task runner that turns UI flows into screenshots, DOM captures, console/network evidence, and static proof reports.
-- [boundary-atlas](https://github.com/dicnunz/boundary-atlas): local TypeScript/JavaScript architecture analyzer for import graphs, cycles, deep imports, boundary drift, and offline reports.
-- [counterexample-studio](https://github.com/dicnunz/counterexample-studio): property-based testing workbench for JS/TS functions with deterministic seeds, shrink traces, rerun commands, and a local UI.
-- [mentor-worker-benchmark](https://github.com/dicnunz/mentor-worker-benchmark): local benchmark for testing whether mentor-worker LLM collaboration improves deterministic coding-task performance. Includes a [live leaderboard](https://dicnunz.github.io/mentor-worker-benchmark/), methodology, reproducibility docs, and result artifacts.
-- [pixelmelt](https://github.com/dicnunz/pixelmelt): client-side creative coding app that turns an image into a falling-material simulation and exportable WebM clip.
+These repos matter because they support the same pattern: local tools, clear proof, and runnable artifacts.
 
-## Product Prototypes
+- [TaskProof](https://github.com/dicnunz/taskproof): browser specs into screenshots, DOM captures, console/network evidence, and static reports.
+- [Boundary Atlas](https://github.com/dicnunz/boundary-atlas): TS/JS import graphs, cycles, deep imports, boundary drift, and offline reports.
+- [Counterexample Studio](https://github.com/dicnunz/counterexample-studio): property-test failures with deterministic seeds, minimal inputs, shrink traces, and rerun commands.
+- [Mentor-worker benchmark](https://github.com/dicnunz/mentor-worker-benchmark): local benchmark artifacts for mentor-worker LLM collaboration with reproducible scoring and a [live leaderboard](https://dicnunz.github.io/mentor-worker-benchmark/).
+- [PixelMelt](https://github.com/dicnunz/pixelmelt): client-side image-to-material simulation with canvas interaction and WebM export.
 
-- [SignalMatch](https://github.com/dicnunz/signal-match): truth-first ATS/job-match prototype that improves application positioning without inventing credentials or fake achievements.
-- [Agent Marketplace Evals](https://github.com/dicnunz/agent-marketplace-evals): synthetic marketplace benchmark harness with deterministic demo mode, bounded Codex pilot artifacts, and strict claim rules.
+## Other Public Repos
+
+- [SignalMatch](https://github.com/dicnunz/signal-match): truth-first ATS/job-match prototype.
+- [Agent Marketplace Evals](https://github.com/dicnunz/agent-marketplace-evals): synthetic marketplace benchmark harness with deterministic demo mode and strict claim rules.
 - [llm-eval-harness](https://github.com/dicnunz/llm-eval-harness): small Python CLI for reproducible local-LLM evals over OpenAI-compatible APIs.
 - [Med-Explain](https://github.com/dicnunz/med-explain): local clinical-PDF explainer prototype with OCR fallback, lab parsing, charts, and FHIR export.
-- [Trolley Tracker](https://github.com/dicnunz/trolley-tracker): campus transit UI prototype for vehicle state, stop ETAs, rider alerts, and schedule fallback.
+- [Trolley Tracker](https://github.com/dicnunz/trolley-tracker): campus transit UI prototype.
 
-## What This Profile Should Prove
+## What This Should Prove
 
 - I can use AI as a build accelerator without hiding that the work is AI-assisted.
 - I care about runnable artifacts, screenshots, tests, docs, and reproducible proof.
-- I can move from vague product idea to usable demo quickly.
+- I can narrow a vague product idea into a usable demo quickly.
 - I am strongest at packaging, workflows, tooling, and technical storytelling.
-
-## Current Direction
-
-I am focused on AI-assisted software workflows, local LLM evaluation, developer tools, browser automation, and small product systems with clear user value.
