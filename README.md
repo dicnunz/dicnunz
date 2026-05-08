@@ -1,38 +1,39 @@
 # Nicholas Dunzelman
 
-Computer Science student at Florida Tech. I build local-first AI tools and product prototypes that are easy to run, inspect, and judge.
+Computer Science student at Florida Tech. I build local-first AI operator tools and proof-heavy developer systems for real work on a Mac.
 
-## Start Here
+<a href="https://github.com/dicnunz/codex-mission-control">
+  <img src="https://raw.githubusercontent.com/dicnunz/codex-mission-control/main/assets/social-card.png" alt="Codex Mission Control: Stop running Codex like loose chats." />
+</a>
 
-[Codex Relay](https://github.com/dicnunz/codex-relay) is the flagship project.
+## Flagship: Codex Mission Control
 
-Text your Mac. Codex works.
+[![ci](https://github.com/dicnunz/codex-mission-control/actions/workflows/ci.yml/badge.svg)](https://github.com/dicnunz/codex-mission-control/actions/workflows/ci.yml)
 
-A private Telegram DM becomes a local Codex run on a Mac through a LaunchAgent. The phone is the remote; the Mac keeps the files, tools, sandbox, and account context.
+[Codex Mission Control](https://github.com/dicnunz/codex-mission-control) is local traffic control for people running multiple Codex chats against real projects, browsers, inboxes, repos, and account surfaces.
 
-- Install path: `git clone`, `cd codex-relay`, `./scripts/install.sh`
-- Demo: [52-second video](https://github.com/dicnunz/codex-relay/blob/main/assets/codex-relay-demo.mp4)
-- Proof path: no-token demo, fresh-clone test, macOS CI, generated visuals, launch thread
-- Feedback: [try it and report the first blocker](https://github.com/dicnunz/codex-relay/issues/new?template=install-feedback.yml)
-- Boundary: unofficial project, allow-listed Telegram access, local runtime, no hosted relay
+It turns projects into missions, gives shared surfaces lane locks, keeps handoffs in outboxes, and forces risky public/account/payment work into exact approval packets before anything leaves the Mac.
 
-- Portfolio: [dicnunz.github.io](https://dicnunz.github.io/)
-- Launch: [X post](https://x.com/nicdunz/status/2048166756762427808)
-- LinkedIn: [nicdunz](https://www.linkedin.com/in/nicdunz/)
+- Core loop: `projects -> missions -> lane locks -> approval packets -> optional Telegram remote`
+- Install: `git clone`, `./scripts/install.sh`, then `cmc status`, `cmc lanes`, `cmc packet`, `cmc dashboard`
+- Proof: CI, fresh-clone QA, local demo, smoke tests, launch card, dashboard visuals, and first-builder feedback path
+- Boundary: local Mac coordination, not a hosted agent service, not an OpenAI product, not a way around login/MFA/approval gates
 
-## Other Work
+## Current Public Work
 
-These repos support the same pattern: local tools, clear proof, and runnable artifacts.
+- [Clawdeck](https://github.com/dicnunz/clawdeck): local-model mode for an existing OpenClaw/Codex workspace, with Ollama defaults, no-hosted-fallback checks, smoke tests, and handoff briefs.
+- [TaskProof](https://github.com/dicnunz/taskproof): Playwright task specs into screenshots, DOM captures, console/network evidence, rerun scripts, and static proof reports.
+- [Boundary Atlas](https://github.com/dicnunz/boundary-atlas): TS/JS import graphs, cycles, deep imports, boundary drift, dead exports, hotspots, and offline architecture reports.
+- [Counterexample Studio](https://github.com/dicnunz/counterexample-studio): local property-testing workbench with deterministic seeds, minimal counterexamples, shrink traces, reruns, and repro snippets.
+- [Mentor-worker benchmark](https://github.com/dicnunz/mentor-worker-benchmark): local benchmark for mentor/worker LLM collaboration on deterministic coding repair tasks with objective pytest scoring.
+- [CHATTY Revival](https://github.com/dicnunz/CHATTY-Revival): public transparency experiment around a meme/community token, with explicit no-wallet, no-spend, no-fake-engagement, and no-investment-claim boundaries.
+- [PromptSmith](https://github.com/dicnunz/promptsmith-tiny-imagegen-museum): static browser game about repairing image-generation prompts by reading generated exhibit art.
 
-- [TaskProof](https://github.com/dicnunz/taskproof): browser specs into screenshots, DOM captures, console/network evidence, and static reports.
-- [Boundary Atlas](https://github.com/dicnunz/boundary-atlas): TS/JS import graphs, cycles, deep imports, boundary drift, and offline reports.
-- [Counterexample Studio](https://github.com/dicnunz/counterexample-studio): property-test failures with deterministic seeds, minimal inputs, shrink traces, and rerun commands.
-- [Mentor-worker benchmark](https://github.com/dicnunz/mentor-worker-benchmark): local benchmark artifacts for mentor-worker LLM collaboration with reproducible scoring and a [live leaderboard](https://dicnunz.github.io/mentor-worker-benchmark/).
-- [PixelMelt](https://github.com/dicnunz/pixelmelt): client-side image-to-material simulation with canvas interaction and WebM export.
+## What To Judge
 
-## What This Should Prove
+- I use AI as a build accelerator without hiding that the work is AI-assisted.
+- I prefer local-first systems, explicit safety boundaries, and runnable artifacts over vague agent demos.
+- I package the proof: screenshots, tests, CI, reports, sample outputs, demo scripts, and install paths.
+- My strongest lane is turning messy AI work into operator-grade tooling with clear controls.
 
-- I can use AI as a build accelerator without hiding that the work is AI-assisted.
-- I care about runnable artifacts, screenshots, tests, docs, and reproducible proof.
-- I can narrow a vague product idea into a usable demo quickly.
-- I am strongest at packaging, workflows, tooling, and technical storytelling.
+[Portfolio](https://dicnunz.github.io/) | [LinkedIn](https://www.linkedin.com/in/nicdunz/) | [X](https://x.com/nicdunz)
