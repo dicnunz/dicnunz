@@ -36,13 +36,15 @@ It turns projects into missions, gives shared surfaces lane locks, keeps handoff
 - I package the proof: screenshots, tests, CI, reports, sample outputs, demo scripts, and install paths.
 - My strongest lane is turning messy AI work into operator-grade tooling with clear controls.
 
-## Written Audit Paths
+## Self-Serve And Written Paths
 
-For builders with a messy agent workflow, I can do a no-call written review from redacted repo links, screenshots, logs, reports, or a short workflow brief.
+For builders with messy agent workflows: start self-serve with compact templates, or send redacted repo links, screenshots, logs, reports, or a short workflow brief for a no-call written review.
 
+- [$39 Agent Browser Operator OS](https://nicdunz.gumroad.com/l/agent-browser-operator-os): self-serve browser/account/public-action control templates for lanes, proof, handoffs, and go/no-go checks.
+- [Agent Operator Starter Bundle](https://nicdunz.gumroad.com/l/agent-operator-starter-bundle): self-serve lane boards, public-action gates, proof ledgers, and handoff templates.
 - [$149 mini audit](https://nicdunz.gumroad.com/l/agent-workflow-mini-audit): one workflow or product route with the failure mode, proof gap, buyer surface, and next fix sequence.
 - [$750 workflow audit](https://nicdunz.gumroad.com/l/agent-workflow-audit): deeper review for higher-risk agent workflows, public surfaces, or proof gaps.
 
-No secrets, live credentials, private customer data, wallet movement, or call.
+No secrets, live credentials, private customer data, wallet movement, custom setup, account access, or call.
 
-[Portfolio](https://dicnunz.github.io/) | [Operator Sprint](https://dicnunz.github.io/codex-operator-sprint/) | [Starter bundle](https://nicdunz.gumroad.com/l/agent-operator-starter-bundle) | [Mini audit](https://nicdunz.gumroad.com/l/agent-workflow-mini-audit) | [Workflow audit](https://nicdunz.gumroad.com/l/agent-workflow-audit) | [Support $5 receipt](https://nicdunz.gumroad.com/l/smrimu) | [LinkedIn](https://www.linkedin.com/in/nicdunz/) | [X](https://x.com/nicdunz)
+[Portfolio](https://dicnunz.github.io/) | [Operator Sprint](https://dicnunz.github.io/codex-operator-sprint/) | [Browser operator kit](https://nicdunz.gumroad.com/l/agent-browser-operator-os) | [Starter bundle](https://nicdunz.gumroad.com/l/agent-operator-starter-bundle) | [Mini audit](https://nicdunz.gumroad.com/l/agent-workflow-mini-audit) | [Workflow audit](https://nicdunz.gumroad.com/l/agent-workflow-audit) | [Support $5 receipt](https://nicdunz.gumroad.com/l/smrimu) | [LinkedIn](https://www.linkedin.com/in/nicdunz/) | [X](https://x.com/nicdunz)
