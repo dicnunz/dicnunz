@@ -10,30 +10,33 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
-      - name: Print published four-corona shape records only
+      - name: Read only the 17-hex text member from the publicly linked archive
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import urllib.request, re, hashlib, json
-          sources=[('hex',n,3) for n in [11,12,13,14,15,16,17]]+[('iamond',20,2)]
-          for kind,n,threshold in sources:
-              url=f'https://cs.uwaterloo.ca/~csk/heesch/{kind}/{n}{kind}_{threshold}up.txt'
-              try:
-                  data=urllib.request.urlopen(url, timeout=45).read()
-              except Exception as e:
-                  print('FETCH_FAILURE',kind,n,type(e).__name__,str(e),flush=True)
-                  continue
-              print('SOURCE',url,'BYTES',len(data),'SHA256',hashlib.sha256(data).hexdigest(),flush=True)
-              lines=[s.strip() for s in data.decode('utf-8').splitlines() if s.strip()]
-              count=0
-              for i,line in enumerate(lines):
-                  m=re.fullmatch(r'Hc\s*=\s*(\d+)\s+Hh\s*=\s*(\d+)',line)
-                  if m and int(m[1])>=4:
-                      nums=list(map(int,lines[i-1].split()))
-                      cells=list(zip(nums[::2],nums[1::2]))
-                      assert len(cells)==n
-                      print('PUBLIC_H4_SHAPE',json.dumps({'grid':kind,'n':n,'id':count,'hc':int(m[1]),'hh':int(m[2]),'cells':cells,'source':url}),flush=True)
-                      count+=1
-              print('H4_COUNT',kind,n,count,flush=True)
+          import urllib.request, tarfile, re, hashlib, json
+          url='https://cs.uwaterloo.ca/~csk/heesch/heesch_dataset.tar.gz'
+          found=False
+          with urllib.request.urlopen(url, timeout=90) as stream:
+              with tarfile.open(fileobj=stream, mode='r|gz') as archive:
+                  for member in archive:
+                      if not member.isfile() or not member.name.endswith('/17hex_3up.txt'):
+                          continue
+                      data=archive.extractfile(member).read()
+                      print('PUBLIC_ARCHIVE_SOURCE',url,'MEMBER',member.name,'BYTES',len(data),'SHA256',hashlib.sha256(data).hexdigest(),flush=True)
+                      lines=[s.strip() for s in data.decode('utf-8').splitlines() if s.strip()]
+                      count=0
+                      for i,line in enumerate(lines):
+                          m=re.fullmatch(r'Hc\s*=\s*(\d+)\s+Hh\s*=\s*(\d+)',line)
+                          if m and int(m[1])>=4:
+                              nums=list(map(int,lines[i-1].split()))
+                              cells=list(zip(nums[::2],nums[1::2]))
+                              assert len(cells)==17
+                              print('PUBLIC_H4_SHAPE',json.dumps({'grid':'hex','n':17,'id':count,'hc':int(m[1]),'hh':int(m[2]),'cells':cells,'source':url,'member':member.name}),flush=True)
+                              count+=1
+                      print('H4_COUNT',17,count,flush=True)
+                      found=True
+                      break
+          assert found, 'Expected text member was not present'
           PY
