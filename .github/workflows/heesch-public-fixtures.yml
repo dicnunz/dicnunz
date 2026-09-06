@@ -10,29 +10,30 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
-      - name: Print published four-corona records only
+      - name: Print published four-corona shape records only
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
-          import urllib.request, re, hashlib
-          for n in [11,12,13,14,15,16,17]:
-              url=f'https://cs.uwaterloo.ca/~csk/heesch/{n}hex_3up.txt'
+          import urllib.request, re, hashlib, json
+          sources=[('hex',n,3) for n in [11,12,13,14,15,16,17]]+[('iamond',20,2)]
+          for kind,n,threshold in sources:
+              url=f'https://cs.uwaterloo.ca/~csk/heesch/{kind}/{n}{kind}_{threshold}up.txt'
               try:
                   data=urllib.request.urlopen(url, timeout=45).read()
               except Exception as e:
-                  print('FETCH_FAILURE',n,type(e).__name__,str(e),flush=True)
+                  print('FETCH_FAILURE',kind,n,type(e).__name__,str(e),flush=True)
                   continue
               print('SOURCE',url,'BYTES',len(data),'SHA256',hashlib.sha256(data).hexdigest(),flush=True)
-              text=data.decode('utf-8')
-              records=re.split(r'(?m)(?=^H )',text)
+              lines=[s.strip() for s in data.decode('utf-8').splitlines() if s.strip()]
               count=0
-              for record in records:
-                  header=re.search(r'(?m)^~\s+(\d+)\s+(\d+)',record)
-                  if header and int(header[1])>=4:
-                      print('PUBLIC_FIXTURE_BEGIN',n,count,flush=True)
-                      print(record.strip(),flush=True)
-                      print('PUBLIC_FIXTURE_END',n,count,flush=True)
+              for i,line in enumerate(lines):
+                  m=re.fullmatch(r'Hc\s*=\s*(\d+)\s+Hh\s*=\s*(\d+)',line)
+                  if m and int(m[1])>=4:
+                      nums=list(map(int,lines[i-1].split()))
+                      cells=list(zip(nums[::2],nums[1::2]))
+                      assert len(cells)==n
+                      print('PUBLIC_H4_SHAPE',json.dumps({'grid':kind,'n':n,'id':count,'hc':int(m[1]),'hh':int(m[2]),'cells':cells,'source':url}),flush=True)
                       count+=1
-              print('H4_COUNT',n,count,flush=True)
+              print('H4_COUNT',kind,n,count,flush=True)
           PY
