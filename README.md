@@ -12,8 +12,9 @@ The project is in development. The repository currently contains our project pla
 
 ## Selected contributions
 
-- [Bifrost #3640](https://github.com/maximhq/bifrost/pull/3640): preserved tool-call stop reasons during response conversion, with streaming regression tests. Merged.
-- [Booklogr #95](https://github.com/Mozzo1000/booklogr/pull/95): added equivalent ISBN lookup with normalization and check-digit validation. Merged.
+**[Bifrost: streaming stop reasons](https://github.com/maximhq/bifrost/pull/3640)** — merged upstream. Tool-call completion information could be lost when converting chat responses through the Responses API format to Anthropic's format. The fix carries that information through the conversions and adds regression tests, including streams containing both text and tool calls.
+
+**[Booklogr: equivalent ISBN lookup](https://github.com/Mozzo1000/booklogr/pull/95)** — merged upstream. A book saved under an ISBN-10 should also be found using its equivalent ISBN-13. The change normalizes identifiers, validates check digits, converts equivalent ISBNs, and checks both forms while keeping the lookup scoped to the current user.
 
 ## Technical experiment
 
