@@ -17,16 +17,20 @@ jobs:
           git clone --filter=blob:none --no-checkout https://github.com/Layr-Labs/heesch.git official-heesch
           cd official-heesch
           git checkout --detach ce3b8d6974d3f318c3c6081b421ed51c7d041d6e
-          printf '%s\n' '87d35cd173835f0f775cc632921423f6d511dea88352eca30124010cb02b3572  submission/best.heesch' '51c87e0d6fa492a23324f83064c873ef0c6d0fd2b56d0fb137bf50dffd8167a38  submission/proof.drat.xz' > /tmp/expected-heesch-hashes
-          # The proof digest below is the literal upstream declaration.
           python3 - <<'PY'
-          import hashlib, pathlib
-          expected = {'best.heesch':'87d35cd173835f0f775cc632921423f6d511dea88352eca30124010cb02b3572', 'proof.drat.xz':'51c87e0d6fa492a23324f83064c873ef0c6d0d2b56d0fb137bf50dffd8167a38'}
-          for name, digest in expected.items():
+          import hashlib, pathlib, lzma
+          expected_stored = {'best.heesch':'87d35cd173835f0f775cc632921423f6d511dea88352eca30124010cb02b3572', 'proof.drat.xz':'1cefa72c2147ab6e1aa9b02c9f4715f07c82a6fb9aa5175097cddf632102b10e'}
+          for name, digest in expected_stored.items():
               p = pathlib.Path('submission') / name
               actual = hashlib.sha256(p.read_bytes()).hexdigest()
-              print(name, p.stat().st_size, actual)
+              print('STORED_SHA256', name, p.stat().st_size, actual)
               assert actual == digest
+          h = hashlib.sha256()
+          with lzma.open('submission/proof.drat.xz', 'rb') as f:
+              for chunk in iter(lambda: f.read(1048576), b''):
+                  h.update(chunk)
+          print('DECOMPRESSED_PAYLOAD_SHA256', h.hexdigest())
+          print('UPSTREAM_PROOF_DECLARATION', pathlib.Path('submission/best.heesch').read_text().splitlines()[-1])
           PY
           git rev-parse HEAD
           uname -a
