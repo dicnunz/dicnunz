@@ -1,0 +1,79 @@
+name: Heesch baseline verification
+on:
+  push:
+    branches: [research/heesch-baseline-20260906]
+    paths: [.github/workflows/heesch-baseline-verification.yml]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Fetch pinned public upstream, without participant changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --no-checkout https://github.com/Layr-Labs/heesch.git official-heesch
+          cd official-heesch
+          git checkout --detach ce3b8d6974d3f318c3c6081b421ed51c7d041d6e
+          printf '%s\n' '87d35cd173835f0f775cc632921423f6d511dea88352eca30124010cb02b3572  submission/best.heesch' '51c87e0d6fa492a23324f83064c873ef0c6d0fd2b56d0fb137bf50dffd8167a38  submission/proof.drat.xz' > /tmp/expected-heesch-hashes
+          # The proof digest below is the literal upstream declaration.
+          python3 - <<'PY'
+          import hashlib, pathlib
+          expected = {'best.heesch':'87d35cd173835f0f775cc632921423f6d511dea88352eca30124010cb02b3572', 'proof.drat.xz':'51c87e0d6fa492a23324f83064c873ef0c6d0d2b56d0fb137bf50dffd8167a38'}
+          for name, digest in expected.items():
+              p = pathlib.Path('submission') / name
+              actual = hashlib.sha256(p.read_bytes()).hexdigest()
+              print(name, p.stat().st_size, actual)
+              assert actual == digest
+          PY
+          git rev-parse HEAD
+          uname -a
+          python3 --version
+          free -m
+          df -h .
+      - name: Install sandbox prerequisite
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq bubblewrap
+      - name: Run untouched official setup
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd official-heesch
+          /usr/bin/time -v bash setup.sh
+          test -x tools/bin/drat-trim
+          test -x tools/bin/lrat-check
+          test -x tools/bin/cake_lpr
+      - name: Run untouched official benchmark and print complete score
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd official-heesch
+          echo OFFICIAL_BENCHMARK_BEGIN
+          /usr/bin/time -v bash benchmark.sh
+          echo OFFICIAL_BENCHMARK_END
+          echo OFFICIAL_SCORE_JSON_BEGIN
+          cat score.json
+          echo OFFICIAL_SCORE_JSON_END
+          python3 - <<'PY'
+          import json
+          d=json.load(open('score.json'))
+          assert round(d['score'],6)==4.988189
+          assert d['metrics']['hc_verified']==4
+          assert d['metrics']['non_tiler_evidence']=='proof'
+          assert d['metrics']['exact'] is True
+          print('BASELINE_REPRODUCED_WITH_UNCHANGED_OFFICIAL_HARNESS')
+          PY
+      - name: Confirm upstream protected sources and submission are unchanged
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd official-heesch
+          git diff --exit-code -- heesch_verify heesch_encoder harness benchmark.sh benchmark.json setup.sh tools docs tests .github submission
+          git rev-parse HEAD
+          sha256sum submission/best.heesch submission/proof.drat.xz
