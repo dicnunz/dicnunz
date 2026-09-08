@@ -6,10 +6,10 @@ Computer science student at Florida Tech and Community Lead at Krea. Interested 
 
 ## Projects
 
-- [Skidpad](https://github.com/dicnunz/skidpad): a Godot driving sandbox with custom suspension, tire forces, deformable bodywork, and telemetry scenarios.
-- [Depgraph](https://github.com/dicnunz/depgraph): static import analysis and dependency graphs for TypeScript and JavaScript.
-- [Witness](https://github.com/dicnunz/witness): local property testing for synchronous JavaScript and TypeScript functions, with reproducible failures.
-- [Sandglass](https://github.com/dicnunz/sandglass): an interactive image-to-material simulation that runs in the browser.
+- [Vehicle Physics](https://github.com/dicnunz/vehicle-physics): a Godot driving sandbox with custom suspension, tire forces, deformable bodywork, and telemetry scenarios.
+- [Import Graph](https://github.com/dicnunz/import-graph): static import analysis and dependency graphs for TypeScript and JavaScript.
+- [Property Check](https://github.com/dicnunz/property-check): local property testing for synchronous JavaScript and TypeScript functions, with reproducible failures.
+- [Falling Sand](https://github.com/dicnunz/falling-sand): an interactive image-to-material simulation that runs in the browser.
 - [Folio](https://github.com/dicnunz/folio): a student planning app in development with Caleb Brooks for our senior project. The repository contains our project plan, presentation, and course website.
 
 ## Contributions
