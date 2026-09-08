@@ -9,7 +9,7 @@ Computer science student at Florida Tech and Community Lead at Krea. Interested 
 - [Bifrost #3640](https://github.com/maximhq/bifrost/pull/3640): preserved tool-call stop reasons in streaming conversions.
 - [Booklogr #95](https://github.com/Mozzo1000/booklogr/pull/95): added equivalent ISBN-10 and ISBN-13 lookups.
 
-[Browse upstream pull requests](https://github.com/search?q=is%3Apr+author%3Adicnunz+-user%3Adicnunz&type=pullrequests). The forks on this account are associated with upstream contributions.
+[Browse upstream pull requests](https://github.com/search?q=is%3Apr+author%3Adicnunz+-user%3Adicnunz&type=pullrequests).
 
 ## Selected projects
 
@@ -22,6 +22,11 @@ Computer science student at Florida Tech and Community Lead at Krea. Interested 
 
 - [Folio](https://github.com/dicnunz/folio): a student planning app in development with Caleb Brooks for our senior project. The repository contains our project plan, presentation, and course website.
 
+## 3D studies
+
+- [Hidden Leaf](https://github.com/dicnunz/hidden-leaf): a Godot village explorer with Blender-generated architecture, a walkable ramen shop and an [Apple Silicon build](https://github.com/dicnunz/hidden-leaf/releases/latest). A stylized Naruto fan environment.
+- [Tokyo](https://github.com/dicnunz/tokyo): a Three.js city explorer with streamed PLATEAU geometry and worker-built collision indexes. [Runs locally](https://github.com/dicnunz/tokyo#run-locally); citywide reconstruction remains unfinished.
+
 ## Experiments
 
-[Asyncio timeouts](https://github.com/dicnunz/asyncio-timeouts) examines worker lifetimes after cancellation. [Tokyo](https://github.com/dicnunz/tokyo) is an unfinished city explorer. [References](https://github.com/dicnunz/references) studies creative work through inspected sources; its benefit remains unproven.
+[Asyncio timeouts](https://github.com/dicnunz/asyncio-timeouts) examines worker lifetimes after cancellation. [References](https://github.com/dicnunz/references) studies creative work through inspected sources; its benefit remains unproven.
