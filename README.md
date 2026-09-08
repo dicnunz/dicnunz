@@ -9,6 +9,8 @@ Computer science student at Florida Tech and Community Lead at Krea. Interested 
 - [Bifrost #3640](https://github.com/maximhq/bifrost/pull/3640): preserved tool-call stop reasons in streaming conversions.
 - [Booklogr #95](https://github.com/Mozzo1000/booklogr/pull/95): added equivalent ISBN-10 and ISBN-13 lookups.
 
+[Browse upstream pull requests](https://github.com/search?q=is%3Apr+author%3Adicnunz+-user%3Adicnunz&type=pullrequests). The forks on this account are associated with upstream contributions.
+
 ## Selected projects
 
 | Project | What it does | Try it |
