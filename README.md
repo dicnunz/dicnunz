@@ -1,32 +1,13 @@
-# Nicholas Dunzelman
+## Selected work
 
-Computer science student at Florida Tech and Community Lead at Krea. Interested in software engineering opportunities.
+- [Import Graph](https://github.com/dicnunz/import-graph): JavaScript and TypeScript dependency analysis and architecture checks.
+- [Mars Stereo](https://github.com/dicnunz/mars-stereo): calibrated Spirit Navcam images reconstructed as textured terrain.
+- [Crumby Coloring](https://github.com/dicnunz/crumby-coloring): exhaustive graph enumeration with independently checkable coloring certificates.
+- [Vehicle Physics](https://github.com/dicnunz/vehicle-physics): suspension, tire forces and deformable bodywork in Godot.
+- [Golden Record](https://github.com/dicnunz/golden-record): Voyager analog waveform recovery into grayscale raster images.
+- [Codex Sessions](https://github.com/dicnunz/codex-sessions): local project discovery and cooperative session locks.
 
-[Website](https://dicnunz.github.io/) · [LinkedIn](https://www.linkedin.com/in/nicdunz/)
-
-## Merged contributions
+## Contributions
 
 - [Bifrost #3640](https://github.com/maximhq/bifrost/pull/3640): preserved tool-call stop reasons in streaming conversions.
 - [Booklogr #95](https://github.com/Mozzo1000/booklogr/pull/95): added equivalent ISBN-10 and ISBN-13 lookups.
-
-[Browse upstream pull requests](https://github.com/search?q=is%3Apr+author%3Adicnunz+-user%3Adicnunz&type=pullrequests).
-
-## Selected projects
-
-| Project | What it does | Try it |
-| --- | --- | --- |
-| [Codex Sessions](https://github.com/dicnunz/codex-sessions) | Coordinates local Codex sessions on macOS with project discovery and cooperative locks. | [Install](https://github.com/dicnunz/codex-sessions#quick-demo) |
-| [Falling Sand](https://github.com/dicnunz/falling-sand) | Turns images into an interactive material simulation with painting tools and video export. | [Live demo](https://dicnunz.github.io/demos/pixelmelt/) |
-| [Vehicle Physics](https://github.com/dicnunz/vehicle-physics) | Godot driving sandbox with custom suspension, tire forces, and deformable bodywork. | [Mac download](https://github.com/dicnunz/vehicle-physics/releases/latest) |
-| [Property Check](https://github.com/dicnunz/property-check) | Finds reproducible failures in JavaScript and TypeScript properties and reduces them to smaller cases. | [Example report](https://dicnunz.github.io/demos/counterexample/) |
-
-- [Folio](https://github.com/dicnunz/folio): a student planning app in development with Caleb Brooks for our senior project. The repository contains our project plan, presentation, and course website.
-
-## 3D studies
-
-- [Hidden Leaf](https://github.com/dicnunz/hidden-leaf): a Godot village explorer with Blender-generated architecture, a walkable ramen shop and an [Apple Silicon build](https://github.com/dicnunz/hidden-leaf/releases/latest). A stylized Naruto fan environment.
-- [Tokyo](https://github.com/dicnunz/tokyo): a Three.js city explorer with streamed PLATEAU geometry and worker-built collision indexes. [Runs locally](https://github.com/dicnunz/tokyo#run-locally); citywide reconstruction remains unfinished.
-
-## Experiments
-
-[Asyncio timeouts](https://github.com/dicnunz/asyncio-timeouts) examines worker lifetimes after cancellation. [References](https://github.com/dicnunz/references) studies creative work through inspected sources; its benefit remains unproven.
