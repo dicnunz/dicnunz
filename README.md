@@ -1,5 +1,3 @@
-Computer science senior at Florida Tech. Community and creator-program work at Krea.
-
-This account contains personal experiments made with AI coding tools.
+I work at [Krea](https://www.krea.ai/). Computer science senior at Florida Tech.
 
 [X](https://x.com/nicdunz) · [LinkedIn](https://www.linkedin.com/in/nicdunz/)
